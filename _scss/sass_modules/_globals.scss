@@ -1,0 +1,36 @@
+$borders: (
+	header_border    : 1px solid #333,
+	menu_item_bottom : 3px solid #333,
+	instagram_aside  : 1rem solid transparent 
+	);
+
+$colors: (
+	header : rgba(255,255,255,.2),
+	shows  : #999,
+	nav_text : #444,
+	event_text : #000,
+	post_bg : rgba(255,255,255,.8),
+	post_bg_hover : rgba(255,255,255,1),
+	post_text: #000
+	);
+
+$fontsize: (
+	h2 : 1.3rem,
+	post_date : .8rem,
+	post_title : 1.1rem
+	);
+
+@mixin section_head {
+	width: 100%;
+	height: 2rem;
+	text-align: center;
+	font-size: map-get($fontsize, 'h2');
+	line-height: 2rem;
+	margin-bottom: 1rem;
+}
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/seamless_paper_texture.png');
+}

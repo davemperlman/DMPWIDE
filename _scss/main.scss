@@ -1,0 +1,702 @@
+$colors: (
+	main_text  : #192029,
+	light_text : #fff,
+	dark_text  : #323, 
+	link_text  : #444,
+	link_hover : #e07d34,
+	background : #fff
+	);
+
+$font: (
+	main_size : 1.1rem,
+	h2_size   : 1.5rem,
+	nav_size  : 1.2rem,
+	post_date : .7rem,
+	caption   : .85rem,
+	family    : 'Rokkitt'
+	);
+
+// Global Element Styling
+
+a {
+	text-decoration: none;
+	color: map-get($colors, 'link_text');
+	&:hover {
+		transition: color .5s ease;
+		color: map-get($colors, 'link_hover');
+		text-decoration: underline;
+	}
+}
+
+body {
+	font-size: map_get($font, 'main_size');
+	color: map-get($colors, 'main_text');
+	font-family: map-get($font, 'family');
+	background-color: map-get($colors, 'background');
+}
+
+h2 {
+	padding: 20px;
+	font-size: map-get($font, 'h2_size');
+}
+
+p {
+	text-indent: 1rem;
+	line-height: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+#poststuff{
+	.inside {
+		background-color: #000;
+		input[type=radio] {
+			display: block !important;
+		}
+	}
+}
+
+.pagination {
+	width: 100%;
+	max-width: 800px;
+	margin: 1rem auto;
+	clear: both;
+	#prev {
+		float: left;
+		width: 5rem;
+		height: 5rem;
+		text-align: center;
+		position: relative;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			//opacity: 0;
+			background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/02/next-and-previous-button-icons_69271.jpg');
+			background-size: 160%;
+			background-repeat: no-repeat;
+			background-position: 17px -46px;
+		}
+	}
+	#next {
+		float: right;
+		width: 5rem;
+		height: 5rem;
+		text-align: center;
+		position: relative;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/02/next-and-previous-button-icons_69271.jpg');
+			background-size: 160%;
+			background-repeat: no-repeat;
+			background-position: -65px -46px;
+		}
+	}
+}
+
+.wp-caption-text {
+	font-size: map-get($font, 'caption');
+	text-align: center;
+	text-indent: 0;
+}
+
+#hamburger, #menu-box {
+	display: none;
+}
+
+// Header
+
+.page-head {
+	width: 100%;
+	min-width: 600px;
+	max-width: 1280px;
+	margin: 0 auto;
+	background: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/02/Untitled-1-1.png') no-repeat center center;
+	//background-color: #fff;
+	background-size: 100%;
+	height: 100px;
+	#home-link {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// Container
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+	position: relative;
+}
+
+.fb_iframe_widget {
+	position: absolute !important;
+	right: 0;
+	top: .5rem;
+}
+
+// Nav Bar
+
+nav {
+	background: linear-gradient(to bottom,#222, #000, #000, #000, #222);
+	ul {
+		width: 90%;
+		margin: 0 auto;
+		display: table;
+		li {
+			display: table-cell;
+			text-align: center;
+			font-size: map-get($font, 'nav_size');
+			a {
+				display: block;
+				padding: 10px;
+				color: #fff;
+				&:hover {
+					text-decoration: none;
+				}
+				&:after {
+					display: block;
+					position: relative;
+					bottom: -3px;
+					content: '';
+					border-bottom: 2px solid #fff;
+					transform: scaleX(0);
+					transition: transform 350ms ease-in-out;
+				}
+				&:hover:after {
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
+
+// Blog Section
+.container {
+	max-width: 80rem;
+	//overflow: hidden;
+}
+
+#posts {
+	column-count: 3;
+	column-gap: 0;
+	position: relative;
+}
+
+.post {
+	break-inside: avoid;
+	padding: 20px;
+	margin: 5px;
+	background-color: map-get($colors, 'background');
+	box-shadow: 1px 1px 4px #000;
+	display: inline-block;
+	position: relative;
+	img {
+		max-width: 100%;
+	}
+}
+
+.post-date {
+	font-size: map-get($font, 'post_date');
+}
+
+.post-title {
+	text-align: center;
+}
+
+// Upcoming Shows
+
+#amount {
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	width: 1.4rem;
+	height: 1.4rem;
+	padding-right: .1rem;
+	display: inline-block;
+	text-align: center;
+	font-size: 2rem;
+	position: relative;
+	transition: all .5s;
+	&::after {
+		transition: all .5s;
+		content: '';
+		width: 1.4rem;
+		height: 1.4rem;
+		border: .1rem dashed #fff;
+		box-sizing: border-box;
+		position: absolute;
+		left: .01rem;
+		top: .23rem;
+		border-radius: 100%;
+	}
+	&:hover {
+		color: #8f8;
+		&::after {
+			transform: scale(1.4) rotate(360deg);
+			border-color: #e07d34;
+		}
+	}
+}
+
+.shows {
+	position: relative;
+	padding: 20px;
+	background-image: url('http://moistpie.servebeer.com/dave/entertainmentmaine-fix/wp-content/uploads/2017/02/slash_it.png');
+	color: map-get($colors, 'light_text');
+}
+
+.event {
+	padding: 20px;
+	width: 100%;
+	border-top: 1px solid #fff;
+	td {
+		width: 33%;
+		padding: 25px 10px;
+		text-align: center;
+	}
+}
+
+#event-link {
+	color: #fff;
+	cursor: pointer;
+	background-color: rgba(225,225,225, 0);
+	display: block;
+	transition: all .5s;
+	&:hover, &:active {
+		background-color: rgba(225,225,225,.1);
+	}
+}
+
+#instagram {
+	margin-top: 80px;
+	padding-top: 20px;
+	border-top: 5px groove #fff;
+}
+
+// Footer
+
+footer {
+	//margin-top: 20px;
+	width: 100%;
+	overflow: hidden;
+	padding: 20px;
+}
+.fb-like {
+	//float: right;
+	//width: 40%;
+}
+
+.resources {
+	margin-top: 20px;
+	border-right: 1px solid #000;
+	width: 50%;
+	text-align: center;
+	ul {
+		margin: 0 auto;
+		width: 300px;
+	}
+	a {
+		margin: 10px;
+	}
+}
+
+.subscribe {
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+	float: right;
+}
+
+// About Page
+
+#about {
+	//padding: 20px;
+	p {
+		width: 100%;
+		margin: 0 auto;
+	}
+	img {
+		width: 70%;
+		display: block;
+		margin: 20px auto;
+	}
+}
+
+// Contact Page
+
+#contact {
+	//padding: 20px;
+	width: 100%;
+	color: map-get($colors, 'light_text');
+	background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2016/11/slash_it.png');
+	input, textarea {
+		box-sizing: border-box;
+		width: 100%;
+	}
+}
+
+#contact-wrap {
+	width: 400px;
+	margin: 0 auto;
+}
+
+
+
+
+// Single Posts
+
+ .content{
+	width: 100%;
+	max-width: 80rem;
+	margin: 0 auto;
+	img.alignright { float: right; margin: 0 0 1em 1em; }
+	img.alignleft { float: left; margin: 0 1em 1em 0; }
+	img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+	.alignright { float: right; }
+	.alignleft { float: left; }
+	.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+	.wp-caption {
+		display: inline-block !important;
+	}
+	h2 {
+		text-align: left;
+	}
+	color: map-get($colors, 'dark_text');
+	//background-image: url('http://108.176.232.90/wordpress/wp-content/uploads/2016/11/slash_it.png');
+	overflow: hidden;
+	// .music-event-image {
+	// 	width: 45%;
+	// 	display: inline-block;
+	// 	img {
+	// 		width: 80%;
+	// 		display: block;
+	// 		margin: 0 auto;
+	// 	}
+	// }
+ 	.blog-post {
+		width: 100%;
+		//padding: 20px;
+		margin: 3rem auto;
+	}
+}
+
+#event-description {
+	position: relative;
+	&::after {
+		content: '';
+		display: block;
+		width: 70%;
+		margin: 0 auto;
+		border-bottom: .2rem dashed #fff;
+	}
+}
+
+.music-event-image img{
+		max-width: 50%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
+.music-event {
+	background: url('http://moistpie.servebeer.com/dave/entertainmentmaine-fix/wp-content/uploads/2017/02/slash_it.png');
+	color: #fff;
+	h2 {
+		text-align: center;
+	}
+	.description {
+		//width: 50%;
+		display: inline;
+	}
+}
+
+//Single Pages
+ .content_wrap {
+ 	//padding: .5rem;
+ 	margin: 0 auto;
+ 	//padding: 1rem;
+ 	img.alignright { float: right; }
+	img.alignleft { float: left; margin: .5rem 1em 1em 1rem; }
+	img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+	.alignright { float: right; }
+	.alignleft { float: left; }
+	.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+	.wp-caption {
+		display: inline-block !important;
+		font-style: italic;
+		width: 100%;
+		height: auto;
+		margin: .5rem 1rem;
+		padding: .5rem 0rem 0 .5rem;
+		background-color: #eee;
+		//overflow: hidden;
+		img {
+			padding: 0;
+			margin: 0;
+		}
+		p {
+			margin-left: -.5rem;
+		}
+	}
+
+
+	p {
+		margin-top: .5rem;
+	}
+ 	h2 {
+ 		margin: 2rem;
+ 		clear: both;
+ 	}
+ 	h3 {
+ 		margin: 2rem;
+ 		font-size: 1.3rem;
+ 		font-weight: bold;
+ 		clear: both;
+ 	}
+ 	img {
+ 		padding: .5rem;
+ 		background-color: #eee;
+ 		margin: .5rem 1rem;
+ 	}
+ }
+
+ .meta {
+	float: none;
+	border-bottom: .2rem dashed #fff;
+ 	li {
+ 		//display: table-cell;
+ 		margin-bottom: 1rem;
+ 		margin-left: 0;
+ 		text-align: center;
+ 		display: block;
+ 		font-size: 1.2rem;
+ 		//text-align: center;
+ 		span {
+ 			//text-decoration: underline;
+ 			color: #4af;
+ 			//width: 50%;
+ 			display: block;
+ 			//margin-left: 1rem;
+ 			font-size: 1.5rem;
+
+ 		}
+ 	}
+ }
+
+ .venue-meta.meta {
+ 	border-bottom: none;
+ }
+
+@media screen and (max-width: 676px) {
+	.container {
+		width: 100%;
+		border-top: .1rem solid #000;
+		//overflow: hidden;
+	}
+	body {
+		width: 100%;
+	}
+	.page-head {
+		height: 80px;
+		min-width: 0;
+	}
+
+	#posts {
+		display: block;
+		column-count: 1;
+	}
+
+	.post {
+		display: block;
+	}
+
+	.resources {
+		h1 {
+			display: block;
+			margin: 1rem auto;
+			width: 90%;
+			font-size: 1.5rem;
+
+		}
+		border: none;
+		width: 100%;
+		.mg-wpsi {
+			width: 100%;
+			display: table;
+			clear: both;
+			li {
+				display: table-cell;
+				float: none !important;
+			}
+		}
+	}
+	.fb-like.fb_iframe_widget {
+		display: none !important;
+	}
+
+	.subscribe {
+		width: 100%;
+		float: none;
+		clear: both;
+		margin-top: 40px;
+		text-align: center;
+		overflow: hidden;
+	}
+	.content, .music-event {
+		.music-event-image {
+			//padding: 10px;
+			width: 100%;
+			img {
+				max-width: 100%;
+			}
+		}
+		.music-event-content, .blog-post {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0;
+			p, ul {
+				padding: 10px;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.meta {
+	float: none;
+	border-bottom: .2rem dashed #fff;
+ 	li {
+ 		//display: table-cell;
+ 		margin-bottom: 1rem;
+ 		margin-left: 0;
+ 		text-align: center;
+ 		display: block;
+ 		font-size: 1.2rem;
+ 		//text-align: center;
+ 		span {
+ 			//text-decoration: underline;
+ 			color: #4af;
+ 			//width: 50%;
+ 			display: block;
+ 			//margin-left: 1rem;
+ 			font-size: 1.5rem;
+
+ 		}
+ 	}
+ }
+
+ #contact-wrap {
+ 	width: 100%;
+ }
+
+
+	.content_wrap {
+		position: relative;
+		padding: .5rem;
+		width: 100%;
+		p {
+			//padding: .5rem;
+			img {
+				position: relative;
+				width: 100%;
+			}
+		}
+		.wp-caption {
+			width: 100% !important;
+			padding: 0;
+			margin: 1rem 0;
+			p {
+				padding: 0;
+			}
+			img {
+				width: 100% !important;
+				height: auto;
+				margin: 0;
+				// padding: 0;
+			}
+		}
+
+		img.alignleft, img.alignright {
+			margin: 1rem 0;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			float: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	nav {
+		width: 100%;
+		padding: 0;
+		white-space: nowrap;
+		position: relative;
+		#hamburger {
+			position: absolute;
+			display: block;
+			left: .5rem;
+			top: -2rem;
+			z-index: 100;
+			font-size: 2rem;
+			cursor: pointer;
+		}
+		#menu-box {
+			display: none;
+		}
+		.menu-nav-container {
+			height: 0;
+			overflow: hidden;
+			transition: all .5s;
+			position: absolute;
+			// left: -25rem;
+			z-index: 100;
+			width: 0rem;
+			border-bottom-right-radius: 100%;
+			background-color: #111;
+			opacity: .9;
+			box-shadow: .7rem .7rem 5rem #111;
+			//overflow: visible;
+			ul {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				li {
+					//background-color: #444;
+					display: block;
+					//text-align: left;
+					padding: .5rem 2rem;
+					font-size: 1.4rem;
+					//font-weight: bold;
+					width: 50%;
+					a {
+						padding: 5px 0;
+						color: #111;
+						transition: all .6s;
+					}
+				}
+			}
+		}
+		#menu-box:checked ~ .menu-nav-container {
+			padding-top: 100%;
+			width: 80%;
+			left: 0rem;
+			a {
+				color: #fff;
+			}
+		}
+		#menu-box:checked + #hamburger {
+			color: #4b4;
+		}
+	}
+	footer {
+		padding: 0;
+	}
+}

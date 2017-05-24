@@ -1,0 +1,110 @@
+// #amount {
+// 	text-decoration: none;
+// 	color: #fff;
+// 	text-align: center;
+// 	width: 1.4rem;
+// 	height: 1.4rem;
+// 	padding-right: .1rem;
+// 	display: inline-block;
+// 	text-align: center;
+// 	font-size: 2rem;
+// 	position: relative;
+// 	transition: all .5s;
+// 	&::after {
+// 		transition: all .5s;
+// 		content: '';
+// 		width: 1.4rem;
+// 		height: 1.4rem;
+// 		border: .1rem dashed #fff;
+// 		box-sizing: border-box;
+// 		position: absolute;
+// 		left: .01rem;
+// 		top: .23rem;
+// 		border-radius: 100%;
+// 	}
+// 	&:hover {
+// 		color: #8f8;
+// 		&::after {
+// 			transform: scale(1.4) rotate(360deg);
+// 			border-color: #e07d34;
+// 		}
+// 	}
+// }
+#upcoming-title {
+	@include section_head;
+}
+.shows {
+	position: relative;
+	//padding: 20px;
+	margin-bottom: 1rem;
+	@media screen and (min-width: 601px) {
+		width: 60%;
+		max-width: 60rem;
+		padding: 0;
+		display: inline-block;
+	}
+	// background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/seamless_paper_texture.png');
+	a {
+		text-decoration: none;
+		color: map-get($colors, 'event_text');
+	}
+}
+
+.event {
+	padding: 20px;
+	width: 100%;
+	border-bottom: 1px solid #000;
+	td {
+		width: 33%;
+		padding: 25px 10px;
+		text-align: center;
+	}
+}
+
+.to-arrow {
+	position: relative;
+	&::before {
+		position: absolute;
+		content: '\276f';
+		display: block;
+		opacity: 0;
+		left: 50%;
+		transition: all .3s;
+	}
+}
+
+.event-link {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	transition: all .5s;
+	&:hover {
+		background-color: rgba(255,255,255, .3);
+		.to-arrow::before {
+		left: 1rem;
+		opacity: 1;
+		}
+	}
+}
+
+#instagram {
+	@media screen and (min-width: 601px) {
+		float: right;
+		width: 40%;
+		box-sizing: border-box;
+		border-left: map-get($borders, 'instagram_aside');
+	}
+	h2 {
+		width: 100%;
+		height: 2rem;
+		text-align: center;
+		font-size: map-get($fontsize, 'h2');
+		line-height: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.sb_instagram_header {
+		padding: 0px 5px !important;
+	}
+
+}

@@ -1,0 +1,12 @@
+// Master SASS file for theme.
+	
+	// Global Styling for theme - Color, Fonts, Font Sizes, Body Margins, Etc.
+@import 'sass_modules/globals';
+	// Header Style
+@import 'sass_modules/header';
+	// Style For Events Archived
+@import 'sass_modules/events';
+	// Style for Posts Archived
+@import 'sass_modules/posts';
+	// Style for Footer
+@import 'sass_modules/footer';

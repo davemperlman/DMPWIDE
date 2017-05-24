@@ -1,0 +1,68 @@
+#latest {
+	@include section_head;
+	width: 60%;
+	max-width: 60rem;
+	margin-top: 1rem;
+	@media screen and (max-width: 601px) {
+		width: 100%;
+	}
+}
+
+#posts {
+	position: relative;
+	width: 60%;
+	max-width: 60rem;
+	a {
+		text-decoration: none;
+		color: map-get($colors, 'post_text');
+	}
+	@media screen and (min-width: 1200px) {
+		column-count: 2;
+		column-gap: 0;	
+	}
+	@media screen and (max-width: 601px) {
+		width: 100%;
+	}
+}
+
+.post {
+	break-inside: avoid;
+	//padding: 20px;
+	overflow: hidden;
+	margin: 5px;
+	background-color: map-get($colors, 'post_bg');
+	box-shadow: 1px 1px 3px #bbb;
+	display: inline-block;
+	position: relative;
+	transition: all .5s;
+	border-radius: 10px;
+	&:hover {
+		box-shadow: 1px 1px 6px #000;
+		background-color: map-get($colors, 'post_bg_hover');
+	}
+	img {
+		max-width: 100%;
+	}
+	p {
+		margin: 1.5rem;
+	}
+
+}
+
+.post-info {
+	margin: .4rem;
+	border-bottom: .01rem solid #000;
+}
+
+.post-date {
+	font-size: map-get($fontsize, 'post_date');
+	margin-left: 1rem;
+	margin-top: .5rem;
+}
+
+.post-title {
+	text-align: center;
+	font-size: map-get($fontsize, 'post_title');
+	margin-top: .5rem;
+	margin-bottom: 1.5rem;
+}
