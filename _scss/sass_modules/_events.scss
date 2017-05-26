@@ -88,6 +88,7 @@
 }
 
 #instagram {
+	position: relative;
 	@media screen and (min-width: 601px) {
 		float: right;
 		width: 40%;
@@ -103,8 +104,23 @@
 		margin-bottom: 1rem;
 	}
 
-	.sb_instagram_header {
-		padding: 0px 5px !important;
-	}
+	// .sb_instagram_header {
+	// 	padding: 0px 5px !important;
+	// }
+
+	// #sb_instagram {
+	// 	@media screen and (max-width: 3000px ) {
+	// 		column-count: 4;
+	// 	}
+	// 	@media screen and (max-width: 2000px ) {
+	// 		column-count: 3;
+	// 	}
+	// 	@media screen and (max-width: 1000px ) {
+	// 		column-count: 2;
+	// 	}
+	// }
+	// .sbi_item {
+	// 	width: 50%;
+	// }
 
 }

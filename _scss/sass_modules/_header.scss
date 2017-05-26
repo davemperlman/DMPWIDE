@@ -159,6 +159,19 @@
 	}
 }
 
+.main-banner {
+	max-height: 35rem;
+	overflow: hidden;
+	min-width: 20rem;
+	background-color: map-get($colors, 'main_banner');
+	img {
+		width: 100%;
+		max-width: 70rem;
+		float: right;
+		display: block;
+	}
+}
+
 // .slick-image-slide {
 // 	background-color: rgba(0,0,0,.8);
 // 	width: 100%;
@@ -167,4 +180,6 @@
 // 		max-width: 90rem;
 // 	}
 // }
+
+
 

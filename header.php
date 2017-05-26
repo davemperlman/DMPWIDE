@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <link rel="icon" href="http://www.entertainmentmaine.com/wp-content/uploads/2017/03/icon.png">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 		<?php wp_head(); ?>
 	</head>
 	<body>
