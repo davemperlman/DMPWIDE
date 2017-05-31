@@ -1,0 +1,28 @@
+.content_wrap {
+	h2 {
+		@include h2;
+	}
+	h3 {
+		@include h2;
+		font-size: 1rem;
+		width: 100%;
+		clear: both;
+	}
+	img {
+		clear: both;
+		//margin: 0 auto;
+		display: block;
+	}
+	.wp-caption-text {
+		font-size: map-get($fontsize, 'post_date');
+		text-align: center;
+		width: 80%;
+		margin-left: 10%;
+		padding: .5rem 0;
+		background-color: rgba(0,0,0, 0.85);
+		color: #fff;
+		position: absolute;
+		bottom: 0;
+	}
+	overflow: hidden;
+}

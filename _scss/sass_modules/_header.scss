@@ -9,9 +9,15 @@
 		max-width: 25rem;
 		min-width: 15rem;
 		line-height: 1rem;
+		text-decoration: none;
+		color: map-get($colors, 'post_text');
+		transition: all .5s;
+		&:hover {
+			color: #777;
+		}
 		h1 {
 			font-size: 2.5rem;
-			transition: all .2s;
+			transition: font-size .2s;
 			@media screen and (max-width: 800px) {
 				font-size: 2.1rem;
 			}
@@ -27,12 +33,12 @@
 		height: 6rem;
 		float: right;
 		display: inline-block;
-		@media screen and (max-width: 600px ) {
+		@media screen and (max-width: 700px ) {
 			min-width: 1rem;
 			width: auto;		
 		}
 		nav {
-			z-index: 99;
+			z-index: 100;
 			#closing-cross {
 				display: none;
 				cursor: pointer;
@@ -47,11 +53,11 @@
 				&:hover {
 					color: #777;
 				}
-				@media screen and (max-width: 600px) {
+				@media screen and (max-width: 700px) {
 					display: block;
 				}
 			}
-			@media screen and (max-width: 600px ) {
+			@media screen and (max-width: 700px ) {
 				max-height: 0;
 				overflow: hidden;
 				position: absolute;
@@ -65,30 +71,51 @@
 				width: 100%;
 				margin: 0 auto;
 				display: table;
-				@media screen and (max-width: 600px) {
+				@media screen and (max-width: 700px) {
 					display: block;
 				}
 				line-height: 4.5rem;
 				li {
 					display: table-cell;
 					width: 25%;
-					@media screen and (max-width: 600px) {
+					@media screen and (max-width: 700px) {
 						display: block;
+						box-shadow: 0 0 90px rgba(0,0,0,.9) inset;
 						&:nth-of-type(1) {
-							background: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/dumb.jpg');
-							background-size: cover;
-						}
-						&:nth-of-type(2) {
 							background: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/DSC03432.jpg');
 							background-size: cover;
+							a {
+								background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/about.png');
+								background-size: 30%;
+								background-position: center;
+							}
+						}
+						&:nth-of-type(2) {
+							background: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/IMG_0748.jpg');
+							background-size: cover;
+							a {
+								background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/Services.png');
+								background-size: 30%;
+								background-position: center;
+							}
 						}
 						&:nth-of-type(3) {
 							background: url('http://www.entertainmentmaine.com/wp-content/uploads/2016/11/DSC03445.jpg');
 							background-size: cover;
+							a {
+								background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/media.png');
+								background-size: 30%;
+								background-position: center;
+							}
 						}
 						&:nth-of-type(4) {
-							background: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/03/band.jpg');
+							background: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/dumb.jpg');
 							background-size: cover;
+							a {
+								background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/contact.png');
+								background-size: 30%;
+								background-position: center;
+							}
 						}
 						
 						background-repeat: no-repeat;
@@ -101,6 +128,9 @@
 							height: 100%;
 							width: 100%;
 							text-indent: -9999px;
+							background-image: url('https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg');
+							background-size: 10%;
+							background-repeat: no-repeat;
 							&:hover:after {
 								display: none;
 							}
@@ -112,9 +142,7 @@
 						padding: 10px;
 						color: map-get($colors, 'nav_text');
 						text-decoration: none;
-						&:hover {
-							
-						}
+						transition: all .5s;
 						&:after {
 							display: block;
 							width: 80%;
@@ -143,7 +171,7 @@
 	right: 1rem;
 	font-size: 2rem;
 	cursor: pointer;
-	@media screen and (min-width: 601px ) {
+	@media screen and (min-width: 701px ) {
 		display: none;
 	}
 }
@@ -155,6 +183,11 @@
 		transition: all .5s;
 		li:hover {
 			filter: grayscale(0%);
+			box-shadow: 0 0 10px rgba(0,0,0,.9) inset;
+			a {
+				background-size: 70%;
+				background-position: bottom;
+			}
 		}
 	}
 }

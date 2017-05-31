@@ -8,6 +8,13 @@
       <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
 		<?php wp_head(); ?>
 	</head>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4641103090318450",
+    enable_page_level_ads: true
+  });
+</script>
 	<body>
       <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -29,10 +36,10 @@
 
 
 		<header class="page-head">
-      <div class="title-section">
+      <a href="<?php echo get_home_url(); ?>" class="title-section">
         <h1 class="page-title">Dave Perlman</h1>
         <h2 class="page-subtitle">A musician from Maine.</h2>
-      </div>
+      </a>
       <div class="container">
             <input type="checkbox" id="menu-box">
             <label id="hamburger" for="menu-box">&#9776</label>

@@ -15,6 +15,7 @@
 		width: 90%;
 		display: block;
 		top: 1rem;
+		margin-bottom: 3rem;
 	}
 	@media screen and (max-width: 600px) {
 		width: 100%;
@@ -55,19 +56,20 @@
 	}
 	&:hover {
 		filter: grayscale(0%);
-		img {
+		.thumbnail-wrap {
 			box-shadow: 1px 1px 6px #000;
 		}
 	}
-	img {
+	.thumbnail-wrap {
 		width: 200px;
 		height: 150px;
 		box-shadow: 1px 1px 3px #bbb;
 		border-radius: 10px;
 		transition: all .5s;
+		overflow: hidden;
 		@media screen and (max-width: 839px) {
 			width: 100%;
-			//height: 200px;
+			height: auto;
 			border-radius: 0;
 		}
 	}
@@ -86,6 +88,13 @@
 
 .post-info {
 	margin: .4rem;
+	&::after {
+		content: '';
+		width: 50%;
+		margin: 1rem auto;
+		display: block;
+		border-bottom: 1px solid #000;
+	}
 }
 
 .post-date {

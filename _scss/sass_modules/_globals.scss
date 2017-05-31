@@ -30,8 +30,49 @@ $fontsize: (
 	margin-bottom: 1rem;
 }
 
+@mixin h2 {
+	text-align: center;
+	font-size: map-get($fontsize, 'h2');
+	margin: 1rem;
+	font-weight: bold;
+}
+
 
 body {
 	font-family: 'Open Sans', sans-serif;
 	background-image: url('http://www.entertainmentmaine.com/wp-content/uploads/2017/05/seamless_paper_texture.png');
+}
+
+.container {
+	max-width: 1500px;
+	margin: auto;
+	@media screen and (min-width: 601px) {
+		padding: 0 1rem;
+	}
+}
+p {
+	padding: .5rem;
+}
+
+// Global styling rules for images in posts
+	img.alignright { float: right; margin: 0 0 1em 1em; }
+	img.alignleft { float: left; margin: 0 1em 1em 0; }
+	img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+	.alignright { float: right; }
+	.alignleft { float: left; }
+	.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+	.wp-caption {
+		display: inline-block !important;
+	}
+@media screen and (max-width: 600px) {
+	.alignright, .alignleft, .aligncenter, img.alignright, img.alignleft, img.aligncenter {
+		width: 100%;
+		float: none;
+		margin: 1rem auto;
+		display: block !important;
+		position: relative;
+		img {
+			width: 100%;
+		}
+	}
 }

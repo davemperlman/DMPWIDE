@@ -7,7 +7,7 @@
                <?php the_post_thumbnail(); ?>
             </section>
                <article class="blog-post">
-                  <section class="description">
+                  <section class="about">
                      <p><?php the_content(); ?></p>
                   </section>
                </article>

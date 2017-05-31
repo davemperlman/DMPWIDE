@@ -12,4 +12,11 @@
 @import 'sass_modules/footer';
 
 	// Style for Single Events
-@import 'sass_modules/event_single';
+@import 'sass_modules/eventsingle';
+	// Style for Single Posts
+@import 'sass_modules/postsingle';
+
+	// Style for About Page
+//@import 'sass_modules/about'; Not Necessary for this Theme
+	// Style for Services Page
+@import 'sass_modules/services';
