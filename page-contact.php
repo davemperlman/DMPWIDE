@@ -2,7 +2,7 @@
 		<section id="contact">
 			<div id="contact-wrap">
 				<h2>Contact Me</h2>
-				<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form 1"]'); ?>
+				<?php echo do_shortcode('[caldera_form id="CF592ebd3dde137"]'); ?>
 			</div>
 		</section>
 <?php get_footer(); ?>

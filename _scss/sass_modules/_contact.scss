@@ -1,0 +1,24 @@
+#contact {
+	//background-color: #444;
+	#contact-wrap {
+		max-width: 40rem;
+		width: 100%;
+		margin: 1rem auto;
+		h2 {
+			@include h2;
+		}
+		.caldera-grid {
+			input, textarea {
+				border: none;
+				resize: none;
+			}
+			@media screen and (max-width: 600px) {
+				input[type='submit'] {
+					width: 90%;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
