@@ -12,6 +12,13 @@ body {
 p {
   padding: .5rem; }
 
+i {
+  color: #000; }
+
+a {
+  color: #888;
+  font-style: italic; }
+
 img.alignright {
   float: right;
   margin: 0 0 1em 1em; }

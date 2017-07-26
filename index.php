@@ -15,8 +15,8 @@ get_header();
 			<?php $i = 1;if ( have_posts() ) : while ( have_posts() && $i < 5 ) : the_post(); ?>
 				<section class="post">
 					<a href="<?php the_permalink(); ?>">
-					<div class="thumbnail-wrap">
-						<?php the_post_thumbnail(); ?>
+					<div class="thumbnail-wrap" style="background: #000 url('<?php the_post_thumbnail_url(); ?>') no-repeat; background-size: cover;">
+						
 					</div>
 						<div class="post-content">
 							<section class="post-info">

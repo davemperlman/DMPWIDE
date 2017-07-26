@@ -54,6 +54,15 @@ p {
 	padding: .5rem;
 }
 
+i {
+	color: #000;
+}
+
+a {
+	color: #888;
+	font-style: italic;
+}
+
 // Global styling rules for images in posts
 	img.alignright { float: right; margin: 0 0 1em 1em; }
 	img.alignleft { float: left; margin: 0 1em 1em 0; }
